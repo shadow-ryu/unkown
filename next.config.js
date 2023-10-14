@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    serverActions: true,
+  },
     images: {
         remotePatterns: [
           {
@@ -24,7 +27,12 @@ const nextConfig = {
           }, {
             protocol: "https",
             hostname: "cdn.pixabay.com",
+          },
+          {
+            protocol: "https",
+            hostname: "utfs.io",
           }
+        
         ],
       },
 }
